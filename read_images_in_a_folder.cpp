@@ -7,12 +7,12 @@ void cv::glob(String pattern, std::vector< String > & result, bool recursive = f
 
 */
 
-glob("/home/images/*.png", fn, false);
+cv::glob("/home/images/*.png", fn, false);
 // or 
-glob(dataPath + "/*.jpg", fn, false);
+cv::glob(dataPath + "/*.jpg", fn, false);
 
-size_t count = fn.size(); 
-for (size_t i=0; i<count; i++)
+int count = fn.size(); 
+for (int i=0; i<count; i++)
 {
     std::cout << fn[i] << std::endl; 
     cv::Mat frame = imread(fn[i]);
